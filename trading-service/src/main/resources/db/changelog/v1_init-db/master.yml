@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: kissloryshy
+
+  - include:
+      file: DDL/10-create-tables.sql
+      relativeToChangelogFile: true
+
+  - include:
+      file: DML/10-insert-data.sql
+      relativeToChangelogFile: true

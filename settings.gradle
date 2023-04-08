@@ -1,1 +1,4 @@
 rootProject.name = 'jshop'
+
+include 'discovery-service'
+include 'trading-service'

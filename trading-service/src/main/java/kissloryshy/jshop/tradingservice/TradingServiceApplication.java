@@ -1,13 +1,12 @@
-package kissloryshy.jshop;
+package kissloryshy.jshop.tradingservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
-public class JshopApplication {
-
+public class TradingServiceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(JshopApplication.class, args);
+        SpringApplication.run(TradingServiceApplication.class, args);
     }
-
 }

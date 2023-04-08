@@ -1,0 +1,1 @@
+Simple java spring shop project with microservices
