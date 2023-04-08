@@ -3,6 +3,10 @@ version: '3'
 volumes:
   postgres-data:
     driver: local
+  rabbitmq-data:
+    driver: local
+  rabbitmq-log:
+    driver: local
 
 services:
   postgres-trading:
@@ -16,3 +20,15 @@ services:
     ports:
       - "11001:11001"
     command: -p 11001
+
+  rabbitmq:
+    image: rabbitmq:3.11-management
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq/
+      - rabbitmq-log:/var/log/rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: 1212
+    ports:
+      - "5672:5672"
+      - "15672:15672"
